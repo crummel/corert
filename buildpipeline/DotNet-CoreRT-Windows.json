@@ -527,8 +527,7 @@
       "value": "https://dotnet.myget.org/F/dotnet-core/api/v2/package"
     },
     "MyGetApiKey": {
-      "value": null,
-      "isSecret": true
+      "value": null
     }
   },
   "demands": [
