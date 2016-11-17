@@ -1,7 +1,7 @@
 {
   "Repository": "corert",
   "Definitions": {
-    "Path": "DotNet\\CoreRT",
+    "Path": ".",
     "Type": "VSTS",
     "BaseUrl":  "https://devdiv.visualstudio.com/DefaultCollection"
   },
