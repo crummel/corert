@@ -313,6 +313,17 @@
       "deleteTestResults": true
     }
   ],
+  "_links": {
+    "self": {
+      "href": "https://devdiv.visualstudio.com/DefaultCollection/0bdbc590-a062-4c3f-b0f6-9383f67865ee/_apis/build/Definitions/4511"
+    },
+    "web": {
+      "href": "https://devdiv.visualstudio.com/DefaultCollection/_permalink/_build/index?collectionId=011b8bdf-6d56-4f87-be0d-0092136884d9&projectId=0bdbc590-a062-4c3f-b0f6-9383f67865ee&definitionId=4511"
+    },
+    "editor": {
+      "href": "https://devdiv.visualstudio.com/DefaultCollection/_permalink/_build/definitionEditor?collectionId=011b8bdf-6d56-4f87-be0d-0092136884d9&projectId=0bdbc590-a062-4c3f-b0f6-9383f67865ee&definitionId=4511"
+    }
+  },
   "buildNumberFormat": "$(date:yyyyMMdd)$(rev:-rr)",
   "jobAuthorizationScope": "projectCollection",
   "jobTimeoutInMinutes": 60,
@@ -335,6 +346,13 @@
   },
   "quality": "definition",
   "defaultBranch": "refs/heads/master",
+  "authoredBy": {
+    "id": "89387ac7-a5ee-45a8-844b-db22c6dca93d",
+    "displayName": "Chris Rummel",
+    "uniqueName": "crummel@microsoft.com",
+    "url": "https://app.vssps.visualstudio.com/Aa44b2c06-f247-425c-8464-4a0676af910a/_apis/Identities/89387ac7-a5ee-45a8-844b-db22c6dca93d",
+    "imageUrl": "https://devdiv.visualstudio.com/_api/_common/identityImage?id=89387ac7-a5ee-45a8-844b-db22c6dca93d"
+  },
   "queue": {
     "pool": {
       "id": 39,
@@ -343,8 +361,11 @@
     "id": 36,
     "name": "DotNet-Build"
   },
+  "uri": "vstfs:///Build/Definition/4511",
   "path": "\\DotNet\\CoreRT",
   "type": "build",
+  "revision": 10,
+  "createdDate": "2016-11-17T22:49:11.29Z",
   "id": 4511,
   "name": "DotNet-CoreRT-Mac",
   "url": "https://devdiv.visualstudio.com/DefaultCollection/0bdbc590-a062-4c3f-b0f6-9383f67865ee/_apis/build/Definitions/4511",
