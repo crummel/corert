@@ -166,6 +166,24 @@
       "enabled": true,
       "continueOnError": false,
       "alwaysRun": false,
+      "displayName": "Build packages",
+      "timeoutInMinutes": 0,
+      "task": {
+        "id": "d9bafed4-0b18-4f58-968d-86655b4d2ce9",
+        "versionSpec": "*",
+        "definitionType": "task"
+      },
+      "inputs": {
+        "filename": "$(Build.SourcesDirectory)\\corert\\buildscripts\\build-packages.cmd",
+        "arguments": "/OfficialBuildId=$(OfficialBuildId) $(Platform) $(Configuration)",
+        "workingFolder": "corert",
+        "failOnStandardError": "false"
+      }
+    },
+    {
+      "enabled": true,
+      "continueOnError": false,
+      "alwaysRun": false,
       "displayName": "Download nuget",
       "timeoutInMinutes": 0,
       "task": {
@@ -350,7 +368,7 @@
       }
     },
     {
-      "enabled": true,
+      "enabled": false,
       "continueOnError": true,
       "alwaysRun": true,
       "displayName": "Final clean to remove any lingering process",

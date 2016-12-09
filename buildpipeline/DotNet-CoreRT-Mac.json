@@ -125,6 +125,24 @@
       }
     },
     {
+      "enabled": true,
+      "continueOnError": false,
+      "alwaysRun": false,
+      "displayName": "Build packages",
+      "timeoutInMinutes": 0,
+      "task": {
+        "id": "d9bafed4-0b18-4f58-968d-86655b4d2ce9",
+        "versionSpec": "*",
+        "definitionType": "task"
+      },
+      "inputs": {
+        "filename": "$(Build.SourcesDirectory)/corert/buildscripts/build-packages.sh",
+        "arguments": "$(Platform) $(Configuration) -OfficialBuildId $(OfficialBuildId)",
+        "workingFolder": "corert",
+        "failOnStandardError": "false"
+      }
+    },
+    {
       "enabled": false,
       "continueOnError": false,
       "alwaysRun": false,
@@ -266,7 +284,8 @@
       "value": "all"
     },
     "GitUrl": {
-      "value": "https://github.com/dotnet/corert"
+      "value": "https://github.com/dotnet/corert",
+      "allowOverride": true
     },
     "SourceBranch": {
       "value": "master",
