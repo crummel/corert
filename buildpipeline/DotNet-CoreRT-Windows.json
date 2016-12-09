@@ -452,9 +452,6 @@
       "value": "HEAD",
       "allowOverride": true
     },
-    "Build.Clean": {
-      "value": "all"
-    },
     "GitUrl": {
       "value": "https://github.com/dotnet/corert",
       "allowOverride": true
