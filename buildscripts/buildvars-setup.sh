@@ -216,7 +216,7 @@ while [ "$1" != "" ]; do
             ;;
         disableparallelbuild)
             shift
-            export __MsBuildParallelBuildArg=
+            export __MsBuildParallelBuildArg=/m
             ;;
         *)
           export __UnprocessedBuildArgs="$__UnprocessedBuildArgs $1"

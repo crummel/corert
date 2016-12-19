@@ -45,7 +45,7 @@ if /i "%1" == "/milestone" (set __ToolchainMilestone=%2&shift&shift&goto Arg_Loo
 if /i "%1" == "/dotnetclipath" (set __DotNetCliPath=%2&shift&shift&goto Arg_Loop)
 
 if /i "%1" == "/officialbuildid" (set "__ExtraMsBuildParams=/p:OfficialBuildId=%2"&shift&shift&goto Arg_Loop)
-if /i "%1" == "disableparallelbuild"   (set __MsBuildParallelBuildArg=&shift&goto Arg_Loop)
+if /i "%1" == "disableparallelbuild"   (set __MsBuildParallelBuildArg=/maxcpucount&shift&goto Arg_Loop)
 
 echo Invalid command line argument: %1
 exit /b 1
