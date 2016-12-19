@@ -151,6 +151,7 @@ export __VerboseBuild=0
 export __ClangMajorVersion=3
 export __ClangMinorVersion=5
 export __CrossBuild=0
+export __MsBuildParallelBuildArg=/m
 
 
 while [ "$1" != "" ]; do
@@ -212,6 +213,10 @@ while [ "$1" != "" ]; do
         -officialbuildid)
             shift
             export __ExtraMsBuildArgs="$__ExtraMsBuildArgs /p:OfficialBuildId=$1"
+            ;;
+        disableparallelbuild)
+            shift
+            export __MsBuildParallelBuildArg=
             ;;
         *)
           export __UnprocessedBuildArgs="$__UnprocessedBuildArgs $1"

@@ -317,7 +317,7 @@
       },
       "inputs": {
         "filename": "docker",
-        "arguments": "run -w=\"$(GitDirectory)\" --name $(DockerContainerName) $(DockerModifiedImageName) $(GitDirectory)/buildscripts/build-managed.sh $(Platform) $(Configuration) -OfficialBuildId $(OfficialBuildId)",
+        "arguments": "run -w=\"$(GitDirectory)\" --name $(DockerContainerName) $(DockerModifiedImageName) $(GitDirectory)/buildscripts/build-managed.sh $(Platform) $(Configuration) -OfficialBuildId $(OfficialBuildId) disableparallelbuild",
         "workingFolder": "",
         "failOnStandardError": "false"
       }
