@@ -103,7 +103,7 @@
       },
       "inputs": {
         "filename": "$(Build.SourcesDirectory)\\$(SourceFolder)\\buildscripts\\build-managed.cmd",
-        "arguments": "/OfficialBuildId=$(OfficialBuildId) $(Platform) $(Configuration) disableparallelbuild",
+        "arguments": "/OfficialBuildId=$(OfficialBuildId) $(Platform) $(Configuration)",
         "workingFolder": "$(SourceFolder)",
         "failOnStandardError": "false"
       }

@@ -85,7 +85,7 @@
       },
       "inputs": {
         "filename": "$(Build.SourcesDirectory)/$(SourceFolder)/buildscripts/build-managed.sh",
-        "arguments": "$(Platform) $(Configuration) -OfficialBuildId $(OfficialBuildId) disableparallelbuild",
+        "arguments": "$(Platform) $(Configuration) -OfficialBuildId $(OfficialBuildId)",
         "workingFolder": "$(SourceFolder)",
         "failOnStandardError": "false"
       }
