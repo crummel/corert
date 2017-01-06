@@ -139,7 +139,7 @@
       },
       "inputs": {
         "filename": "$(Build.SourcesDirectory)/$(SourceFolder)/buildscripts/publish-packages.sh",
-        "arguments": "-AzureAccount=$(CloudDropAccountName) -AzureToken=$(CloudDropAccessToken) -Container=$(Label) -- /p:OverwriteOnPublish=true",
+        "arguments": "-AzureAccount $(CloudDropAccountName) -AzureToken $(CloudDropAccessToken) -Container $(Label)",
         "workingFolder": "$(Build.SourcesDirectory)/$(SourceFolder)",
         "failOnStandardError": "false"
       }

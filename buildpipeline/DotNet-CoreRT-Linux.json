@@ -479,7 +479,7 @@
       },
       "inputs": {
         "filename": "docker",
-        "arguments": "run -w=\"$(GitDirectory)\" --name $(DockerContainerName) $(DockerModifiedImageName) $(GitDirectory)/buildscripts/publish-packages.sh -AzureAccount=$(CloudDropAccountName) -AzureToken=$(CloudDropAccessToken) -Container=$(Label) -verbose -- /p:OverwriteOnPublish=true",
+        "arguments": "run -w=\"$(GitDirectory)\" --name $(DockerContainerName) $(DockerModifiedImageName) $(GitDirectory)/buildscripts/publish-packages.sh -AzureAccount $(CloudDropAccountName) -AzureToken $(CloudDropAccessToken) -Container $(Label)",
         "workingFolder": "$(SourceFolder)",
         "failOnStandardError": "false"
       }
