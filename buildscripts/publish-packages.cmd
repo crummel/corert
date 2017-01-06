@@ -1,7 +1,12 @@
-REM @echo off
-
+@echo off
+setlocal EnableDelayedExpansion
 REM don't pass args to buildvars-setup, just get defaults
 call %~dp0buildvars-setup.cmd
+
+set _msbuildexe="%ProgramFiles(x86)%\MSBuild\14.0\Bin\MSBuild.exe"
+if not exist !_msbuildexe! (set _msbuildexe="%ProgramFiles%\MSBuild\14.0\Bin\MSBuild.exe")
+REM hopefully it's on the path
+if not exist !_msbuildexe! set _msbuildexe=msbuild
 
 set AzureAccount=
 set AzureToken=
