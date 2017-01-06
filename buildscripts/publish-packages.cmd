@@ -1,3 +1,5 @@
+REM @echo off
+
 REM don't pass args to buildvars-setup, just get defaults
 call %~dp0buildvars-setup.cmd
 
