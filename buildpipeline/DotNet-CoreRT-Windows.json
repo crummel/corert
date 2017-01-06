@@ -236,7 +236,7 @@
       "inputs": {
         "symbolServiceURI": "https://devdiv.artifacts.visualstudio.com/DefaultCollection",
         "requestName": "$(system.teamProject)/$(Build.BuildNumber)/$(Build.BuildId)",
-        "sourcePath": "$(Build.SourcesDirectory)\\corefx\\bin",
+        "sourcePath": "$(Build.SourcesDirectory)\\corert\\bin",
         "assemblyPath": "",
         "toLowerCase": "true",
         "detailedLog": "true",
@@ -444,6 +444,17 @@
     "SourceFolder": {
       "value": "corert_$(Build.BuildId)",
       "allowOverride": false
+    },
+    "CloudDropAccountName": {
+      "value": "dotnetbuildoutput"
+    },
+    "CloudDropAccessToken": {
+      "value": null,
+      "isSecret": true
+    },
+    "UpdatePublishedVersions.AuthToken": {
+      "value": null,
+      "isSecret": true
     }
   },
   "demands": [
