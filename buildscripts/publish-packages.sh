@@ -4,24 +4,24 @@
 scriptRoot="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 . $scriptRoot/buildvars-setup.sh
 
-set AzureAccount=
-set AzureToken=
-set Container=
+AzureAccount=
+AzureToken=
+Container=
 
 while [ "$1" != "" ]; do
         lowerI="$(echo $1 | awk '{print tolower($0)}')"
         case $lowerI in
         -azureaccount)
             shift
-            set AzureAccount=$1
+            AzureAccount=$1
             ;;
         -azuretoken)
             shift
-            set AzureToken=$1
+            AzureToken=$1
             ;;
         -container)
             shift
-            set Container=$1
+            Container=$1
             ;;
         *)
           echo Bad argument $1
