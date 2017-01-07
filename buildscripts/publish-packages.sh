@@ -13,14 +13,17 @@ while [ "$1" != "" ]; do
         case $lowerI in
         -azureaccount)
             shift
+            echo "account: $1"
             export AzureAccount=$1
             ;;
         -azuretoken)
             shift
+            echo "token: $1"
             export AzureToken=$1
             ;;
         -container)
             shift
+            echo "container: $1"
             export Container=$1
             ;;
         *)
