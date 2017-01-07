@@ -1,12 +1,11 @@
 @echo off
-setlocal EnableDelayedExpansion
 REM don't pass args to buildvars-setup, just get defaults
 call %~dp0buildvars-setup.cmd
 
 set _msbuildexe="%ProgramFiles(x86)%\MSBuild\14.0\Bin\MSBuild.exe"
-if not exist !_msbuildexe! (set _msbuildexe="%ProgramFiles%\MSBuild\14.0\Bin\MSBuild.exe")
+if not exist %_msbuildexe% (set _msbuildexe="%ProgramFiles%\MSBuild\14.0\Bin\MSBuild.exe")
 REM hopefully it's on the path
-if not exist !_msbuildexe! set _msbuildexe=msbuild
+if not exist %_msbuildexe% set _msbuildexe=msbuild
 
 set AzureAccount=
 set AzureToken=
@@ -36,4 +35,5 @@ if "%Container%" == "" (
     exit /b 1
 )
 
+echo %_msbuildexe% %__ProjectDir%\buildscripts\publish.proj /p:CloudDropAccountName=%AzureAccount% /p:CloudDropAccessToken=%AzureToken:"=% /p:ContainerName=%Container% /flp:v=diag;LogFile=publish-packages.log
 %_msbuildexe% %__ProjectDir%\buildscripts\publish.proj /p:CloudDropAccountName=%AzureAccount% /p:CloudDropAccessToken=%AzureToken:"=% /p:ContainerName=%Container% /flp:v=diag;LogFile=publish-packages.log
