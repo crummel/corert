@@ -30,4 +30,5 @@ while [ "$1" != "" ]; do
     shift
 done
 
+echo "$__ProjectRoot/Tools/msbuild.sh $scriptRoot/publish.proj /p:CloudDropAccountName=$AzureAccount /p:CloudDropAccessToken=$AzureToken /p:ContainerName=$Container"
 $__ProjectRoot/Tools/msbuild.sh $scriptRoot/publish.proj /p:CloudDropAccountName=$AzureAccount /p:CloudDropAccessToken=$AzureToken /p:ContainerName=$Container "/flp:v=diag;LogFile=publish-packages.log"
