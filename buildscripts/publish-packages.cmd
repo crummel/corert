@@ -1,4 +1,4 @@
-REM @echo off
+@echo off
 REM don't pass args to buildvars-setup, just get defaults
 call %~dp0buildvars-setup.cmd
 
@@ -25,6 +25,7 @@ exit /b 1
 :ArgsDone
 
 echo account %AzureAccount% token %AzureToken% container %Container%
+set AzureToken=%AzureToken:"=% 
 
 if "%AzureAccount%" == "" (
     echo Azure account not specified.
@@ -39,5 +40,5 @@ if "%Container%" == "" (
     exit /b 1
 )
 
-echo %_msbuildexe% %__ProjectDir%\buildscripts\publish.proj /p:CloudDropAccountName=%AzureAccount% /p:CloudDropAccessToken=%AzureToken:"=% /p:ContainerName=%Container% /flp:v=diag;LogFile=publish-packages.log
+echo %_msbuildexe% %__ProjectDir%\buildscripts\publish.proj /p:CloudDropAccountName=%AzureAccount% /p:CloudDropAccessToken=%AzureToken% /p:ContainerName=%Container% /flp:v=diag;LogFile=publish-packages.log
 %_msbuildexe% %__ProjectDir%\buildscripts\publish.proj /p:CloudDropAccountName=%AzureAccount% /p:CloudDropAccessToken=%AzureToken:"=% /p:ContainerName=%Container% /flp:v=diag;LogFile=publish-packages.log

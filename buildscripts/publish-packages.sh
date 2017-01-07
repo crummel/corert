@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+echo "* $*"
+echo "0 $0 1 $1 2 $2 3 $3 4 $4 5 $5 6 $6 7 $7 8 $8 9 $9"
+
 # don't pass args to buildvars-setup, just get defaults
 scriptRoot="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 . $scriptRoot/buildvars-setup.sh
@@ -7,6 +10,8 @@ scriptRoot="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 export AzureAccount=
 export AzureToken=
 export Container=
+echo "* $*"
+echo "0 $0 1 $1 2 $2 3 $3 4 $4 5 $5 6 $6 7 $7 8 $8 9 $9"
 
 while [ "$1" != "" ]; do
         lowerI="$(echo $1 | awk '{print tolower($0)}')"
