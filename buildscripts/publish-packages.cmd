@@ -36,4 +36,4 @@ if "%Container%" == "" (
     exit /b 1
 )
 
-%_msbuildexe% %__ProjectDir%\buildscripts\publish.proj /p:CloudDropAccountName=%AzureAccount% /p:CloudDropAccessToken=%AzureToken% /p:ContainerName=%Container% /flp:v=diag;LogFile=publish-packages.log
+%_msbuildexe% %__ProjectDir%\buildscripts\publish.proj /p:CloudDropAccountName=%AzureAccount% /p:CloudDropAccessToken=%AzureToken:"=% /p:ContainerName=%Container% /flp:v=diag;LogFile=publish-packages.log
