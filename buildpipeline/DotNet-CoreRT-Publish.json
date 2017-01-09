@@ -54,7 +54,7 @@
         "scriptType": "inlineScript",
         "scriptName": "",
         "arguments": "-gitUrl $(GitUrl) -root $(Pipeline.SourcesDirectory)",
-        "inlineScript": "param($gitUrl, $root)\n\nif (Test-Path $root)\n{\n  Remove-Item -Recurse -Force $root\n}\n$(Git) clone --no-checkout $gitUrl $root 2>&1 | Write-Host\ncd $root\n$(Git) checkout $env:SourceVersion 2>&1 | Write-Host\n\nWrite-Host (\"##vso[task.setvariable variable=Pipeline.SourcesDirectory;]$root\")",
+        "inlineScript": "param($gitUrl, $root)\n\nif (Test-Path $root)\n{\n  Remove-Item -Recurse -Force $root\n}\ngit clone --no-checkout $gitUrl $root 2>&1 | Write-Host\ncd $root\ngit checkout $env:SourceVersion 2>&1 | Write-Host\n\nWrite-Host (\"##vso[task.setvariable variable=Pipeline.SourcesDirectory;]$root\")",
         "workingFolder": "",
         "failOnStandardError": "true"
       }
@@ -429,10 +429,6 @@
     },
     "UseLegacyBuildScripts": {
       "value": "false",
-      "allowOverride": true
-    },
-    "Git": {
-      "value": "git",
       "allowOverride": true
     }
   },
