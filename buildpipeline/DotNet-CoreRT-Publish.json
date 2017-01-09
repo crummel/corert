@@ -94,7 +94,7 @@
         "scriptType": "inlineScript",
         "scriptName": "",
         "arguments": "$(CloudDropAccountName) $(CloudDropAccessToken) $(Label)-linux",
-        "inlineScript": "param($account, $token, $container)\nif ($env:UseLegacyBuildScripts -eq \"true\")\n{\n  .\\sync.cmd /ab /p:CloudDropAccountName=$account /p:CloudDropAccessToken=$token /p:ContainerName=$container\n}\nelse\n{\n  .\\init-tools.cmd\n  msbuild .\\buildpipeline\\syncAzure.proj /p:CloudDropAccountName=$account /p:CloudDropAccessToken=$token /p:ContainerName=$container\n}",
+        "inlineScript": "param($account, $token, $container)\nif ($env:UseLegacyBuildScripts -eq \"true\")\n{\n  .\\sync.cmd /ab /p:CloudDropAccountName=$account /p:CloudDropAccessToken=$token /p:ContainerName=$container\n}\nelse\n{\n  .\\init-tools.cmd\n  msbuild buildscripts\\syncAzure.proj /p:CloudDropAccountName=$account /p:CloudDropAccessToken=$token /p:ContainerName=$container\n}",
         "workingFolder": "$(Pipeline.SourcesDirectory)",
         "failOnStandardError": "false"
       }
@@ -114,7 +114,7 @@
         "scriptType": "inlineScript",
         "scriptName": "",
         "arguments": "$(CloudDropAccountName) $(CloudDropAccessToken) $(Label)-osx",
-        "inlineScript": "param($account, $token, $container)\nif ($env:UseLegacyBuildScripts -eq \"true\")\n{\n  .\\sync.cmd /ab /p:CloudDropAccountName=$account /p:CloudDropAccessToken=$token /p:ContainerName=$container\n}\nelse\n{\n  .\\init-tools.cmd\n  msbuild buildpipeline\\syncAzure.proj /p:CloudDropAccountName=$account /p:CloudDropAccessToken=$token /p:ContainerName=$container\n}",
+        "inlineScript": "param($account, $token, $container)\nif ($env:UseLegacyBuildScripts -eq \"true\")\n{\n  .\\sync.cmd /ab /p:CloudDropAccountName=$account /p:CloudDropAccessToken=$token /p:ContainerName=$container\n}\nelse\n{\n  .\\init-tools.cmd\n  msbuild buildscripts\\syncAzure.proj /p:CloudDropAccountName=$account /p:CloudDropAccessToken=$token /p:ContainerName=$container\n}",
         "workingFolder": "$(Pipeline.SourcesDirectory)",
         "failOnStandardError": "false"
       }
@@ -134,7 +134,7 @@
         "scriptType": "inlineScript",
         "scriptName": "",
         "arguments": "$(CloudDropAccountName) $(CloudDropAccessToken) $(Label)-win",
-        "inlineScript": "param($account, $token, $container)\nif ($env:UseLegacyBuildScripts -eq \"true\")\n{\n  .\\sync.cmd /ab /p:CloudDropAccountName=$account /p:CloudDropAccessToken=$token /p:ContainerName=$container\n}\nelse\n{\n  .\\init-tools.cmd\n  msbuild buildpipeline\\syncAzure.proj /p:CloudDropAccountName=$account /p:CloudDropAccessToken=$token /p:ContainerName=$container\n}",
+        "inlineScript": "param($account, $token, $container)\nif ($env:UseLegacyBuildScripts -eq \"true\")\n{\n  .\\sync.cmd /ab /p:CloudDropAccountName=$account /p:CloudDropAccessToken=$token /p:ContainerName=$container\n}\nelse\n{\n  .\\init-tools.cmd\n  msbuild buildscripts\\syncAzure.proj /p:CloudDropAccountName=$account /p:CloudDropAccessToken=$token /p:ContainerName=$container\n}",
         "workingFolder": "$(Pipeline.SourcesDirectory)",
         "failOnStandardError": "false"
       }
