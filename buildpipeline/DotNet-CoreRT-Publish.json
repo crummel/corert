@@ -63,6 +63,26 @@
       "enabled": true,
       "continueOnError": false,
       "alwaysRun": false,
+      "displayName": "view files",
+      "timeoutInMinutes": 0,
+      "task": {
+        "id": "e213ff0f-5d5c-4791-802d-52ea3e7be1f1",
+        "versionSpec": "*",
+        "definitionType": "task"
+      },
+      "inputs": {
+        "scriptType": "inlineScript",
+        "scriptName": "",
+        "arguments": "",
+        "inlineScript": "gci -recurse",
+        "workingFolder": "$(Pipeline.SourcesDirectory)",
+        "failOnStandardError": "true"
+      }
+    },
+    {
+      "enabled": true,
+      "continueOnError": false,
+      "alwaysRun": false,
       "displayName": "Download Linux packages",
       "timeoutInMinutes": 0,
       "task": {
@@ -74,7 +94,7 @@
         "scriptType": "inlineScript",
         "scriptName": "",
         "arguments": "$(CloudDropAccountName) $(CloudDropAccessToken) $(Label)-linux",
-        "inlineScript": "param($account, $token, $container)\nif ($env:UseLegacyBuildScripts -eq \"true\")\n{\n  .\\sync.cmd /ab /p:CloudDropAccountName=$account /p:CloudDropAccessToken=$token /p:ContainerName=$container\n}\nelse\n{\n  .\\init-tools.cmd\n  msbuild buildpipeline\\syncAzure.proj /p:CloudDropAccountName=$account /p:CloudDropAccessToken=$token /p:ContainerName=$container\n}",
+        "inlineScript": "param($account, $token, $container)\nif ($env:UseLegacyBuildScripts -eq \"true\")\n{\n  .\\sync.cmd /ab /p:CloudDropAccountName=$account /p:CloudDropAccessToken=$token /p:ContainerName=$container\n}\nelse\n{\n  .\\init-tools.cmd\n  msbuild .\\buildpipeline\\syncAzure.proj /p:CloudDropAccountName=$account /p:CloudDropAccessToken=$token /p:ContainerName=$container\n}",
         "workingFolder": "$(Pipeline.SourcesDirectory)",
         "failOnStandardError": "false"
       }
