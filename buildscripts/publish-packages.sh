@@ -38,5 +38,5 @@ done
 scriptRoot="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 . $scriptRoot/buildvars-setup.sh
 
-echo "$__ProjectRoot/Tools/msbuild.sh $scriptRoot/publish.proj /p:CloudDropAccountName=$AzureAccount /p:CloudDropAccessToken=$AzureToken /p:ContainerName=$Container"
-$__ProjectRoot/Tools/msbuild.sh $scriptRoot/publish.proj /p:CloudDropAccountName=$AzureAccount /p:CloudDropAccessToken=$AzureToken /p:ContainerName=$Container "/flp:v=diag;LogFile=publish-packages.log"
+echo "../Tools/msbuild.sh $scriptRoot/publish.proj /p:CloudDropAccountName=$AzureAccount /p:CloudDropAccessToken=$AzureToken /p:ContainerName=$Container"
+../Tools/msbuild.sh $scriptRoot/publish.proj /p:CloudDropAccountName=$AzureAccount /p:CloudDropAccessToken=$AzureToken /p:ContainerName=$Container "/flp:v=diag;LogFile=publish-packages.log"
