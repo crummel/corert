@@ -721,7 +721,7 @@
       "allowOverride": true
     },
     "Label": {
-      "value": "corert-alpha-$(Build.BuildNumber)-linux",
+      "value": "corert-alpha-$(Build.BuildNumber)",
       "allowOverride": true
     },
     "SourceVersion": {
