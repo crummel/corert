@@ -69,7 +69,7 @@
     <ProductBinDir Condition="'$(ProductBinDir)'==''">$(BinDir)Product/</ProductBinDir>
     <TestWorkingDir Condition="'$(TestWorkingDir)'==''">$(BinDir)tests/</TestWorkingDir>
     <PackageOutputRoot Condition="'$(PackageOutputRoot)'=='' and '$(NonShippingPackage)' == 'true'">$(BinDir)packages_noship/</PackageOutputRoot>
-    <PackageOutputRoot Condition="'$(PackageOutputRoot)'==''">$(ProductBinDir)pkg/$(Configuration)/$(OSGroup)</PackageOutputRoot>
+    <PackageOutputRoot Condition="'$(PackageOutputRoot)'==''">$(ProductBinDir)pkg/</PackageOutputRoot>
 
     <!-- Folder where restored Nuget packages will go -->
     <PackagesOutDir Condition="'$(PackagesOutDir)'==''">$(BinDir)packages/</PackagesOutDir>
