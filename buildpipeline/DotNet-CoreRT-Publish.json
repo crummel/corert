@@ -98,6 +98,7 @@
         "workingFolder": "$(Pipeline.SourcesDirectory)",
         "failOnStandardError": "false"
       }
+    },
     {
       "enabled": true,
       "continueOnError": false,
