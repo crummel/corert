@@ -297,6 +297,14 @@
     "UpdatePublishedVersions.AuthToken": {
       "value": null,
       "isSecret": true
+    },
+    "VersionsRepoOwner": {
+      "value": "crummel",
+      "allowOverride": true
+    },
+    "VersionsRepo": {
+      "value": "dotnet_versions",
+      "allowOverride": true
     }
   },
   "demands": [

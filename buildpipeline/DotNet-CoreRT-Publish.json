@@ -381,7 +381,11 @@
       "isSecret": true
     },
     "VersionsRepoOwner": {
-      "value": "dagood",
+      "value": "crummel",
+      "allowOverride": true
+    },
+    "VersionsRepo": {
+      "value": "dotnet_versions",
       "allowOverride": true
     },
     "Pipeline.SourcesDirectory": {
