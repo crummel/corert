@@ -18,42 +18,6 @@
         {
           "Name": "DotNet-CoreRT-Linux",
           "Parameters": {
-            "Platform": "x86"
-          },
-          "ReportingParameters": {
-            "OperatingSystem": "Debian 8.2",
-            "Type": "build/product/",
-            "ConfigurationGroup": "Release",
-            "Platform": "x86"
-          }
-        },
-        {
-          "Name": "DotNet-CoreRT-Mac",
-          "Parameters": {
-            "Platform": "x86"
-          },
-          "ReportingParameters": {
-            "OperatingSystem": "OSX",
-            "Type": "build/product/",
-            "ConfigurationGroup": "Release",
-            "Platform": "x86"
-          }
-        },
-        {
-          "Name": "DotNet-CoreRT-Windows",
-          "Parameters": {
-            "Platform": "x86"
-          },
-          "ReportingParameters": {
-            "OperatingSystem": "Windows",
-            "Type": "build/product/",
-            "ConfigurationGroup": "Release",
-            "Platform": "x86"
-          }
-        },
-        {
-          "Name": "DotNet-CoreRT-Linux",
-          "Parameters": {
             "Platform": "x64"
           },
           "ReportingParameters": {
@@ -98,42 +62,6 @@
         "Configuration": "Debug"
       },
       "Definitions": [
-        {
-          "Name": "DotNet-CoreRT-Linux",
-          "Parameters": {
-            "Platform": "x86"
-          },
-          "ReportingParameters": {
-            "OperatingSystem": "Debian 8.2",
-            "Type": "build/product/",
-            "ConfigurationGroup": "Debug",
-            "Platform": "x86"
-          }
-        },
-        {
-          "Name": "DotNet-CoreRT-Mac",
-          "Parameters": {
-            "Platform": "x86"
-          },
-          "ReportingParameters": {
-            "OperatingSystem": "OSX",
-            "Type": "build/product/",
-            "ConfigurationGroup": "Debug",
-            "Platform": "x86"
-          }
-        },
-        {
-          "Name": "DotNet-CoreRT-Windows",
-          "Parameters": {
-            "Platform": "x86"
-          },
-          "ReportingParameters": {
-            "OperatingSystem": "Windows",
-            "Type": "build/product/",
-            "ConfigurationGroup": "Debug",
-            "Platform": "x86"
-          }
-        },
         {
           "Name": "DotNet-CoreRT-Linux",
           "Parameters": {
