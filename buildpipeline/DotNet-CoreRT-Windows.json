@@ -163,7 +163,7 @@
       }
     },
     {
-      "enabled": false,
+      "enabled": true,
       "continueOnError": false,
       "alwaysRun": false,
       "displayName": "Publish symbols path: \\\\cpvsbuild\\drops\\DotNetCore\\$(Build.DefinitionName)\\$(Build.BuildNumber)\\symbols",
@@ -257,7 +257,7 @@
       }
     },
     {
-      "enabled": false,
+      "enabled": true,
       "continueOnError": true,
       "alwaysRun": false,
       "displayName": "Zip",
@@ -274,7 +274,7 @@
       }
     },
     {
-      "enabled": false,
+      "enabled": true,
       "continueOnError": true,
       "alwaysRun": false,
       "displayName": "Copy Publish Artifact: bin",
@@ -293,7 +293,7 @@
       }
     },
     {
-      "enabled": false,
+      "enabled": true,
       "continueOnError": true,
       "alwaysRun": false,
       "displayName": "Copy Publish Artifact: symbols",
