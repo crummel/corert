@@ -212,7 +212,7 @@
         "scriptType": "inlineScript",
         "scriptName": "",
         "arguments": "-gitHubAuthToken $(UpdatePublishedVersions.AuthToken) -root $(Pipeline.SourcesDirectory)",
-        "inlineScript": "param($gitHubAuthToken, $root)\nif ($env:Configuration -ne \"Release\") { exit }\ncd $root\n. $root\\UpdatePublishedVersions.ps1 `\n  -gitHubUser dotnet-build-bot -gitHubEmail dotnet-build-bot@microsoft.com `\n  -gitHubAuthToken $gitHubAuthToken `\n  -versionsRepoOwner $env:VersionsRepoOwner -versionsRepo $(VersionsRepo) `\n  -versionsRepoPath build-info/dotnet/$env:GitHubRepositoryName/$env:SourceBranch `\n  -nupkgPath $root\\packages\\AzureTransfer\\Windows_NT.x64.$env:Configuration\\Microsoft.TargetingPack.Private.CoreRT\\$env:AzureContainerPackageGlob",
+        "inlineScript": "param($gitHubAuthToken, $root)\nif ($env:Configuration -ne \"Release\") { exit }\ncd $root\n. $root\\UpdatePublishedVersions.ps1 `\n  -gitHubUser dotnet-build-bot -gitHubEmail dotnet-build-bot@microsoft.com `\n  -gitHubAuthToken $gitHubAuthToken `\n  -versionsRepoOwner $env:VersionsRepoOwner -versionsRepo $env:VersionsRepo `\n  -versionsRepoPath build-info/dotnet/$env:GitHubRepositoryName/$env:SourceBranch `\n  -nupkgPath $root\\packages\\AzureTransfer\\Windows_NT.x64.$env:Configuration\\Microsoft.TargetingPack.Private.CoreRT\\$env:AzureContainerPackageGlob",
         "workingFolder": "",
         "failOnStandardError": "true"
       }
