@@ -22,7 +22,7 @@ echo Invalid command line argument: %1
 exit /b 1
 :ArgsDone
 
-set AzureToken=%AzureToken:"=% 
+set AzureToken=%AzureToken:"=%
 
 if "%AzureAccount%" == "" (
     echo Azure account not specified.
